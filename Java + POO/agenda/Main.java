@@ -10,13 +10,13 @@ public class Main {
 		Agenda a = new Agenda();
 		
 		do {
-			System.out.println("---------- Agenda Telefônica ---------");
+			System.out.println("---------- Agenda TelefÃ´nica ---------");
 			System.out.println("\n1 - Adicionar contato");
 			System.out.println("2 - Mostrar todos");
-			System.out.println("3 - Apagar o último contato adicionado");
+			System.out.println("3 - Apagar o Ãºltimo contato adicionado");
 			System.out.println("4 - Apagar todos");
 			System.out.println("0 - Sair");
-			System.out.print("\nEscolha a sua ação: ");
+			System.out.print("\nEscolha a sua aÃ§Ã£o: ");
 			opcao = input.nextInt();
 			
 			switch (opcao) {
@@ -24,7 +24,7 @@ public class Main {
 				Contato c = new Contato();
 				System.out.print("\nDigite o nome: ");
 				c.setNome(input.next());
-				System.out.print("Digite o número: ");
+				System.out.print("Digite o nÃºmero: ");
 				c.setNumero(input.next());
 				System.out.print("\n");
 				a.add(c);
@@ -41,10 +41,13 @@ public class Main {
 				a.removeTodos();
 				System.out.print("\n");
 				break;
+			default:
+				System.out.println("Opcao invÃ¡lida!\n");
+				break;
 			}
 		} while (opcao != 0);
 	
-		System.out.print("Você saiu da agenda telefônica!");
+		System.out.print("VocÃª saiu da agenda telefÃ´nica!");
 		
 		input.close();
 	}
